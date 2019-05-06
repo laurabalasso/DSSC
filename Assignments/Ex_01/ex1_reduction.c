@@ -2,16 +2,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-double local_sum(double local_a, double local_b, int local_n, double h ){
-
-  double local_result;
-  int i;
-  for(i = 0; i<= local_n-1; ++i){
-    double x_i = local_a + i*(h/2.0);
-    local_result += 1.0/(1+x_i*x_i);
-  }
-  local_result = h * local_result;
-  return local_result;
+double local_sum(double local_a, double local_b, double h ){
+    
+    double local_result = 0.0;
+    
+    while(local_a<=local_b){
+        double x_i = local_a + h*0.5;
+        local_result += 1.0/(1.0+x_i*x_i);
+        local_a = local_a+h;
+    }
+    local_result = h * local_result;
+    return local_result;
 }
 
 int main(int argc, char* argv[]){
@@ -32,7 +33,7 @@ int main(int argc, char* argv[]){
     double local_a = a + tid * local_n * h;
     double local_b = local_a + local_n * h;
 
-    global_result += local_sum(local_a, local_b, local_n, h);
+    global_result += local_sum(local_a, local_b, h);
 
   }
   double end = omp_get_wtime();
