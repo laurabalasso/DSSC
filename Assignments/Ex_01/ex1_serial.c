@@ -15,12 +15,25 @@ double approx(double a, double b, double h){
 
 int main(int argc, char* argv[]){
 
-  double a = 0.0;
-  double b = 1.0;
-  double n = 1000000000;
-  double h = 1.0/n;
-  double pi = 4 * approx(a,b,h);
-  printf("pi approximation: %lf\n", pi);
+    clock_t t1, t2;
+    double time;
+    
+    double a = 0.0;
+    double b = 1.0;
+    double n = 1000000000;
+    double h = 1.0/n;
+    
+    t1 = clock();
+    
+    double pi = 4 * approx(a,b,h);
+    
+    t2 = clock();
+    time = ((double) (t2 -t1))/CLOCKS_PER_SEC;
+
+    
+    printf("pi approximation: %lf\n", pi);
+    printf("elapsed time: %lf\n ", time);
+
 
 }
 
