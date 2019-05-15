@@ -1,6 +1,6 @@
 /bin/hostname
 
-cd $HOME/parallel_programming/lesson2/
+cd $HOME/parallel_programming/Assignments/Ex_02/
 
 export OMP_NUM_THREADS=5
 
