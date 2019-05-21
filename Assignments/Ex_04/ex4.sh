@@ -3,12 +3,12 @@ cd $HOME/parallel_programming/Assignments/Ex_04
 
 module load openmpi
 
-mpicc ex5.c -o ex5.x
+mpicc ex4.c -o ex4.x
 
 for np in 2 4 8 16 20
 do
-echo "Number of processes: " ${np} >> ex5.out
-(mpirun -np ${np} ./ex5.x) >> ex5.out
+echo "Number of processes: " ${np} >> ex4.out
+(mpirun -np ${np} ./ex4.x) >> ex4.out
 done
 
 exit
