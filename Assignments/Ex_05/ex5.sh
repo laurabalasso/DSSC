@@ -1,6 +1,6 @@
 /bin/hostname
 
-cd $HOME/parallel_programming/lesson4/
+cd $HOME/parallel_programming/Assignments/Ex_05
 
 module load openmpi/1.8.3/intel/14.0
 
