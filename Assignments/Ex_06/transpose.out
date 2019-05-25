@@ -1,0 +1,19 @@
+
+                         GPU TIME (ms)     BANDWIDTH (GB/s) 
+
+64 threads per block: 
+Fast transpose:          21.323423        50.355038 
+Naive transpose:         61.564480        17.440931 
+Correct result! 
+
+512 threads per block:
+Fast transpose:          10.614080        101.162018 
+Naive transpose:         18.113056        59.279991 
+Correct result! 
+
+1024 threads per block:
+Fast transpose:          13.578272        79.077942 
+Naive transpose:         14.236928        75.419487 
+Correct result! 
+
+
