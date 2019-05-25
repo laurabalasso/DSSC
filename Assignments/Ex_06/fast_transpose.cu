@@ -10,7 +10,7 @@
 
 #define TILE_DIM 32
 
-/* function that fills an array with random floats */
+/* function that fills an array with random doubles */
 
 void random_doubles(double *p, int n) {
     int i;
